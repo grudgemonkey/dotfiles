@@ -1,7 +1,10 @@
 (require 'package)
-(add-to-list 'package-archives
-	     '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+;; (add-to-list 'package-archives
+	    ;; '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
