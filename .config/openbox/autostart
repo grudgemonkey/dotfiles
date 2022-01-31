@@ -18,4 +18,4 @@
 
 tint2 &
 
-nitrogen ~/Pictures/Wallpapers/wall1.jpg
+nitrogen --set-zoom-fill ~/Pictures/Wallpapers/wall1.jpg
