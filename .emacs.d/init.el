@@ -13,7 +13,7 @@
  '(ansi-color-names-vector
    ["#2e3436" "#a40000" "#4e9a06" "#c4a000" "#204a87" "#5c3566" "#729fcf" "#eeeeec"])
  '(custom-enabled-themes '(tsdh-dark))
- '(package-selected-packages '(org-roam)))
+ '(package-selected-packages '(nov org-roam)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -26,3 +26,5 @@
 
 ;; opens todo file every time emacs opens
 (find-file "~/OrgMode/OrgAgenda/todo.org")
+
+(add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
