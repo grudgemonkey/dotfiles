@@ -25,3 +25,5 @@ picom -f &
 ~/.dotfiles/lemonbar.sh | lemonbar -p
 
 nitrogen --set-zoom-fill ~/Pictures/Wallpapers/wall1.jpg
+
+conky &
