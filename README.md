@@ -1,2 +1,5 @@
-git test
-removing stuff from this old repo
+# Grudgemonkey's official Dotfiles
+
+my linux configs
+
+![Screenshot](./scrot.png)
