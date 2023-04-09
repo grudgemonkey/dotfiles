@@ -9,8 +9,8 @@ font:
 
   normal: 
      
-     family: JetBrains Mono
-     #family: Dina
+    #family: JetBrains Mono
+     family: Dina
      style:  Regular
 
   size: 12.0
