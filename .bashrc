@@ -8,7 +8,7 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 #original bash = PS1='[\u@\h \W]\$ '
-PS1='desktop2000\W>  '
+PS1='\[\033[1;35m\]desktop2000\W>\[\033[0m\]  '
 
 # util aliases
 alias la='ls -la'
@@ -16,8 +16,8 @@ alias mov='cd $1 && la'
 alias todo='vim ~/todo.txt'
 
 ##edit bashrc
-alias bashedit='vim ~/.bashrc'
-alias rebash='source ~/.bashrc'
+alias bashedit='vim ~/.dotfiles/.bashrc'
+alias rebash='source ~/.dotfiles/.bashrc'
 
 # installation aliases
 alias get='sudo pacman -S'
