@@ -8,7 +8,7 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 #original bash = PS1='[\u@\h \W]\$ '
-PS1='\[\033[1;35m\]desktop2000\W>\[\033[0m\]  '
+PS1='\[\033[1;35m\]desktop2000 \[\033[1;32m\]\W ->\[\033[0m\]  '
 
 # util aliases
 alias la='ls -la'
