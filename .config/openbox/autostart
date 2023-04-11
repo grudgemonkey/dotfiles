@@ -11,3 +11,6 @@ exec conky &
 
 #set bar
 exec tint2 &
+
+#start emacs daemon
+emacs --daemon

@@ -333,6 +333,16 @@
         <command>alacritty</command>
       </action>
     </keybind>
+    <keybind key="W-e">
+      <action name="Execute">
+	<command>emacs</command>
+      </action>
+    </keybind>
+    <keybind key="W-S-k">
+      <action name="Execute">
+	<command>krita</command>
+      </action>
+    </keybind>
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>
