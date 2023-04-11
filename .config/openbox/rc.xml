@@ -343,6 +343,16 @@
 	<command>krita</command>
       </action>
     </keybind>
+    <keybind key="W-k">
+      <action name="Execute">
+    <command>kate</command>
+      </action>
+    </keybind>
+    <keybind key="W-S-o">
+      <action name="Execute">
+        <command>discord</command>
+      </action>
+    </keybind>
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>
