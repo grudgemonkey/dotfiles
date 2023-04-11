@@ -1,0 +1,13 @@
+#
+# These things are run when an Openbox X Session is started.
+# You may place a similar script in $HOME/.config/openbox/autostart
+# to run user-specific things.
+
+# set wallpaper
+exec feh --bg-fill ~/pictures/wallpapers/archwall.png &
+
+#conky
+exec conky &
+
+#set bar
+exec tint2 &

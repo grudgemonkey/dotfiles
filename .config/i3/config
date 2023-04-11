@@ -198,12 +198,14 @@ bindsym $mod+Shift+o exec discord
 
 ## autostart
 
+exec picom &
+exec feh --bg-fill ~/pictures/wallpapers/wall.jpg
 exec emacs --daemon
 exec conky &
 exec alacritty -e bluetoothctl 
 exec pulseaudio --daemonize
 exec sudo dhcpcd
-exec feh --bg-fill ~/pictures/wallpapers/wall.jpg
+
 
 ## scratchpad
 
