@@ -10,4 +10,4 @@ filetype plugin on
 filetype indent on
 
 set cursorline
-set cursorcolumn
+"set cursorcolumn
