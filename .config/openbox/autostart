@@ -4,7 +4,7 @@
 # to run user-specific things.
 
 # set wallpaper
-exec feh --bg-fill ~/pictures/wallpapers/archwall.png &
+exec feh --bg-fill ~/pictures/wallpapers/wall.png &
 
 #conky
 exec conky &
