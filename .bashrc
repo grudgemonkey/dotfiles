@@ -10,10 +10,16 @@ alias grep='grep --color=auto'
 #original bash = PS1='[\u@\h \W]\$ '
 PS1='\[\033[1;35m\]desktop2000 \[\033[1;32m\]\W \[\033[0;34m\]->\[\033[0m\]  '
 
+# extra PATHs
+export PATH="$HOME/.local/bin:$PATH"
+
 # util aliases
 alias la='ls -la'
 alias mov='cd $1 && la'
 alias todo='vim ~/todo.txt'
+alias yayy='yay -S'
+alias ytdl='youtube-dl -x'
+alias mpvv='mpv --no-video'
 
 ##edit bashrc
 alias bashedit='vim ~/.dotfiles/.bashrc'
