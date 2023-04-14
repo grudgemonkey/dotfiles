@@ -9,6 +9,8 @@
 
 (setq visible-bell t)
 
+(set-face-attribute 'default nil :font "Jetbrains Mono")
+
 (load-theme 'wombat)
 
 ;; Make ESC quit prompts
