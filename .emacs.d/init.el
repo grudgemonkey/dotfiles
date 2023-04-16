@@ -1,3 +1,11 @@
+;; JOEY's EMACS (tm)                              |
+;; alot of this is copied from emacs-from-scratch |
+;; feel free to copy and share it around ;))   |
+;;-----------------------------------------------
+
+
+;; get rid of noob-y stuff like status bars
+
 (setq inhibit-startup-message t)
 
 (scroll-bar-mode -1)
@@ -9,10 +17,11 @@
 
 (setq visible-bell t)
 
-(set-face-attribute 'default nil :font "Jetbrains Mono")
-;;(set-face-attribute 'default nil :font "FreeSerif" :height 120)
 
+;; make emacs prettiful :0
+(set-face-attribute 'default nil :font "Jetbrains Mono" :height 100)
 (load-theme 'wombat)
+
 
 ;; Make ESC quit prompts
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
@@ -111,43 +120,35 @@
   (rune/leader-keys
     "t"  '(:ignore t :which-key "toggles")
     "tt" '(counsel-load-theme :which-key "choose theme")))
-       
 
-(use-package evil
+(use-package projectile
+  :diminish projectile-mode
+  :config (projectile-mode)
+  :custom ((projectile-completion-system 'ivy))
+  :bind-keymap
+  ("C-c p" . projectile-command-map)
   :init
-  (setq evil-want-integration t)
-  (setq evil-want-keybinding nil)
-  (setq evil-want-C-u-scroll t)
-  (setq evil-want-C-i-jump nil)
+  ;; NOTE: Set this to the folder where you keep your Git repos!
+  (when (file-directory-p "~/code")
+    (setq projectile-project-search-path '("~/code")))
+  (setq projectile-switch-project-action #'projectile-dired))
+
+
+
+
+;; org-mode activation
+
+(use-package org)
+(global-set-key (kbd "C-c l") #'org-store-link)
+(global-set-key (kbd "C-c a") #'org-agenda)
+(global-set-key (kbd "C-c c") #'org-store-link)
+
+;; make org-mode not look like shit
+(use-package org-bullets
   :config
-  (evil-mode 1)
-  (define-key evil-insert-state-map (kbd "C-g") 'evil-normal-state)
-  (define-key evil-insert-state-map (kbd "C-h") 'evil-delete-backward-char-and-join)
-
-  ;; Use visual line motions even outside of visual-line-mode buffers
-  (evil-global-set-key 'motion "j" 'evil-next-visual-line)
-  (evil-global-set-key 'motion "k" 'evil-previous-visual-line)
-
-  (evil-set-initial-state 'messages-buffer-mode 'normal)
-  (evil-set-initial-state 'dashboard-mode 'normal))
+  (add-hook 'org-mode-hook (lambda() (org-bullets-mode 1))))
+(setq org-hide-emphasis-markers t)
 
 
-(use-package evil-collection
-  :after evil
-  :config
-  (evil-collection-init))
-
-;;-------bullshit------------
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(evil-collection evil-selection evil general all-the-icons doom-themes which-key use-package rainbow-delimiters ivy-rich helpful doom-modeline counsel)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+;; show emac version on startup
+(message "the version of this particular emac is %s" emacs-version)
